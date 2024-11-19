@@ -1,429 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME</title>
     <style>
-        @font-face{
-            font-family:'agrandir';
-            src:url('Agrandir-Font-Family/Agrandir/Agrandir-GrandHeavy.otf');
-        }
-        @font-face{
-            font-family:'agrandir_tipis';
-            src:url('Agrandir-Font-Family/Agrandir/Agrandir-Regular.otf');
-        }
-        @font-face{
-            font-family:'agrandir_tebal';
-            src:url('Agrandir-Font-Family/Agrandir/Agrandir-TextBold.otf');
-        }
-        body{
-            width:100%;
-            margin:auto;
+      @font-face {
+        font-family: "agrandir";
+        src: url("Agrandir-Font-Family/Agrandir/Agrandir-GrandHeavy.otf");
+      }
+      @font-face {
+        font-family: "agrandir_tipis";
+        src: url("Agrandir-Font-Family/Agrandir/Agrandir-Regular.otf");
+      }
+      @font-face {
+        font-family: "agrandir_tebal";
+        src: url("Agrandir-Font-Family/Agrandir/Agrandir-TextBold.otf");
+      }
+      body {
+        width: 100%;
+        margin: auto;
+      }
 
-        }
+      .home_page {
+        display: grid;
+        grid-area: "home_page";
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 600px 200px;
+        grid-template-areas:
+          "navbar"
+          "content"
+          "footer";
+        background-color: none;
+      }
 
-        .home_page{
-            display:grid;
-            grid-area:'home_page';
-            width:100%;
-            grid-template-columns: 100%;
-            grid-template-rows: 60px 600px  200px;
-            grid-template-areas: 
-            'navbar'
-            'content'
-            
-            'footer'
+      .navbar {
+        display: grid;
+        grid-area: "navbar";
+        width: 100%;
+        height: 60px;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 60px;
+        grid-template-areas:
+          "logo"
+          "navigation_button";
+        background-color: none;
+      }
 
-            ;
-            background-color:none;
+      .logo {
+        grid-area: "logo";
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -5%;
+        background-color: none;
+        margin-top: 10px;
+      }
 
-        }
+      .navigation_button {
+        display: grid;
+        grid-area: "navigation_button";
+        width: 100%;
+        height: 60px;
+        grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
+        grid-template-rows: 60px;
+        grid-template-areas:
+          "navigation1"
+          "navigation2"
+          "navigation3"
+          "navigation4"
+          "navigation5";
+        background-color: none;
+      }
 
-        .navbar{
-            display:grid;
-            grid-area:'navbar';
-            width:100%;
-            height:60px;
-            grid-template-columns: 25% 75%;
-            grid-template-rows:60px ;
-            grid-template-areas: 
-            'logo'
-            'navigation_button'
+      .navigation1 {
+        grid-area: "navigation1";
+      }
+      .navigation2 {
+        grid-area: "navigation2";
+      }
+      .navigation3 {
+        grid-area: "navigation3";
+      }
+      .navigation4 {
+        grid-area: "navigation4";
+        margin-left: 10%;
+      }
+      .navigation5 {
+        grid-area: "navigation5";
+      }
+      .nbutton {
+        width: 100%;
+        border-style: none;
+        background-color: white;
+        font-size: 11px;
+        font-family: "agrandir";
+        margin-top: 30px;
+      }
+      .nbutton:hover {
+        font-size: 13px;
+        transition: 0.2s;
+      }
 
-            ;
-            background-color:none;
-            
-        }
+      .logo img {
+        width: 35%;
+      }
 
-        .logo{
-            grid-area:'logo';
-            width:100%;
-            height:60px;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin-left:-5%;
-            background-color:none;
-            margin-top:10px;
-        }
+      .content {
+        display: grid;
+        grid-area: "content";
+        grid-template-rows: 600px;
+        grid-template-columns: 70% 30%;
+        grid-template-areas:
+          "content_kiri"
+          "content_kanan";
+        width: 100%;
+        height: 600px;
+        background-color: none;
+      }
 
-        .navigation_button{
-            display:grid;
-            grid-area:'navigation_button';
-            width:100%;
-            height:60px;
-            grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
-            grid-template-rows: 60px;
-            grid-template-areas:
-            'navigation1'
-            'navigation2'
-            'navigation3'
-            'navigation4'
-            'navigation5'
-            ;
-            background-color:none;
-        }
+      .content_kiri {
+        width: 100%;
+        height: 600px;
+        grid-area: "content_kiri";
+      }
 
-        .navigation1{
-            grid-area:'navigation1';
+      .content_kiri h1 {
+        margin-left: 13%;
+        margin-top: 140px;
+        font-size: 30px;
+        font-family: "agrandir_tebal";
+      }
 
-        }
-        .navigation2{
-            grid-area:'navigation2';
+      .content_kiri p {
+        margin-left: 13%;
+        font-size: 15px;
+        font-family: "agrandir_tipis";
+        margin-top: 75px;
+      }
 
-        }
-        .navigation3{
-            grid-area:'navigation3';
+      .click_more {
+        font-size: 8px;
+        width: 120px;
+        height: 23px;
+        margin-top: 75px;
+        margin-left: 13%;
+        border-radius: 50px;
+        color: white;
+        background-color: blue;
+        font-family: "agrandir_tipis";
+        border-style: none;
+      }
 
-        }
-        .navigation4{
-            grid-area:'navigation4';
-            margin-left:10%;
+      .click_more:hover {
+        background-color: red;
+      }
 
-        }
-        .navigation5{
-            grid-area:'navigation5';
+      .content_kanan {
+        width: 100%;
+        height: 600px;
+        grid-area: "content_kanan";
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 400px;
+        grid-template-areas: "kotak";
+      }
 
-        }
-        .nbutton{
-            width:100%;
-            border-style:none;
-            background-color:white;
-            font-size:11px;
-            font-family:'agrandir';
-            margin-top:30px;
-        }
-        .nbutton:hover{
-            font-size:13px;
-            transition:0.2s;
-        }
+      .kotak {
+        grid-area: "kotak";
+        width: 300px;
+        height: 500px;
+        background-color: blue;
+        margin-top: 100px;
+      }
 
-        .logo img{
-            width:35%;
-        }
+      .grid {
+        display: grid;
+        grid-area: "grid";
+        width: 100%;
+        height: 1000px;
+        grid-template-rows: 300px 300px;
+        grid-template-columns: 900px;
+        grid-template-areas:
+          "grid_atas"
+          "grid_bawah";
+        background-color: none;
+        margin: auto;
+        align-content: center;
+      }
 
-        .content{
-            display:grid;
-            grid-area:'content';
-            grid-template-rows:600px;
-            grid-template-columns:70% 30% ;
-            grid-template-areas: 
-            'content_kiri'
-            'content_kanan'
-            ;
-            width:100%;
-            height:600px;
-            background-color:none;
-        }
+      .grid_atas {
+        display: grid;
+        grid-area: "grid_atas";
+        width: 1050px;
+        height: 350px;
+        grid-template-columns: 350px 350px 350px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+          "grid1"
+          "grid2"
+          "grid3";
 
-        .content_kiri{
-            width:100%;
-            height:600px;
-            grid-area:'content_kiri';
+        background-color: red;
+        margin-left: 11%;
+      }
 
-        }
+      .grid1 {
+        grid-area: "grid1";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        .content_kiri h1{
-            margin-left:13%;
-            margin-top:140px;
-            font-size:30px;
-            font-family:'agrandir_tebal';
-        }
+      .grid2 {
+        grid-area: "grid2";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        .content_kiri p{
-            margin-left:13%;
-            font-size:15px;
-            font-family:'agrandir_tipis';
-            margin-top:75px;
-        }
+      .grid3 {
+        grid-area: "grid3";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        
+      .grid_bawah {
+        display: grid;
+        grid-area: "grid_bawah";
+        width: 1050px;
+        height: 350px;
+        grid-template-columns: 350px 350px 350px;
+        grid-template-rows: 300px;
+        grid-template-areas:
+          "grid4"
+          "grid5"
+          "grid6";
 
-        .click_more{
-            font-size:8px;
-            width:120px;
-            height:23px;
-            margin-top:75px;
-            margin-left:13%;
-            border-radius:50px;
-            color:white;
-            background-color:black;
-            font-family:'agrandir_tipis';
-            border-style:none;
-        }
+        background-color: red;
+        margin-left: 11%;
+      }
 
-        .click_more:hover{
-            background-color:red;
+      .grid4 {
+        grid-area: "grid4";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        }
+      .grid5 {
+        grid-area: "grid5";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        .content_kanan{
-            width:100%;
-            height:600px;
-            grid-area:'content_kanan';
-            display:grid;
-            grid-template-columns: 300px;
-            grid-template-rows: 400px;
-            grid-template-areas: 
-            'kotak'
-            ;
+      .grid6 {
+        grid-area: "grid6";
+        width: 350px;
+        height: 350px;
+        background-color: yellow;
+      }
 
-        }
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: "footer";
+        background-color: white;
+      }
 
-        .kotak{
-            grid-area:'kotak';
-            width:300px;
-            height:500px;
-            background-color:blue;
-            margin-top:100px;
-        }
-
-        .grid{
-            display:grid;
-            grid-area:'grid';
-            width:100%;
-            height:1000px;
-            grid-template-rows:300px 300px;
-            grid-template-columns:900px;
-            grid-template-areas:
-            'grid_atas'
-            'grid_bawah'
-            ;
-            background-color:none;
-            margin:auto;
-            align-content: center;
-            
-
-            
-        }
-
-        .grid_atas{
-            display:grid;
-            grid-area:'grid_atas';
-            width:1050px;
-            height:350px;
-            grid-template-columns: 350px 350px 350px;
-            grid-template-rows: 300px;
-            grid-template-areas: 
-            'grid1'
-            'grid2'
-            'grid3'
-            ;
-
-            background-color:red;
-            margin-left:11%;
-        }
-
-        .grid1{
-            grid-area:'grid1';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-
-        .grid2{
-            grid-area:'grid2';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-
-        .grid3{
-            grid-area:'grid3';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-
-
-        .grid_bawah{
-            display:grid;
-            grid-area:'grid_bawah';
-            width:1050px;
-            height:350px;
-            grid-template-columns: 350px 350px 350px;
-            grid-template-rows: 300px;
-            grid-template-areas: 
-            'grid4'
-            'grid5'
-            'grid6'
-            ;
-
-            background-color:red;
-            margin-left:11%;
-        }
-
-        .grid4{
-            grid-area:'grid4';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-
-        .grid5{
-            grid-area:'grid5';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-
-        .grid6{
-            grid-area:'grid6';
-            width:350px;
-            height:350px;
-            background-color:yellow;
-        }
-        
-        .footer{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            grid-area:'footer';
-            background-color:white;
-        }
-
-        .footer img{
-            width:100px;
-        }
-
-
+      .footer img {
+        width: 100px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="home_page">
-        <div class="navbar">
-            <div class="logo">
-                <img src="logo-no-background.png">
-            </div>
-            <div class="navigation_button">
-                <div class="navigation1">
-                    <a href="../Index/index.html">
-                        <button class="nbutton">
-                            HOME
-                        </button>
-                    </a>                    
-                </div>
-                <div class="navigation2">
-                    <a href="../car/car.html">
-                        <button class="nbutton">
-                            CARS
-                        </button>
-                    </a>                    
-                </div>
-                <div class="navigation3">
-                    <a href="../cutom_modification/custom_modification.html">
-                        <button class="nbutton">
-                            CUSTOM MODIFICATION
-                        </button>
-                    </a>                    
-                </div>
-                <div class="navigation4">
-                    <a href="../Contact/contact.html">
-                        <button class="nbutton">
-                            CONTACT INFO
-                        </button>
-                    </a>                    
-                </div>
-                <div class="navigation5">
-                    <a href="../faq/faq.html">
-                        <button class="nbutton">
-                            FAQ
-                        </button>
-                    </a>                    
-                </div>
-            </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="logo-no-background.png" />
+        </div>
+        <div class="navigation_button">
+          <div class="navigation1">
+            <a href="../Index/index.html">
+              <button class="nbutton">HOME</button>
+            </a>
+          </div>
+          <div class="navigation2">
+            <a href="../car/car.html">
+              <button class="nbutton">CARS</button>
+            </a>
+          </div>
+          <div class="navigation3">
+            <a href="../cutom_modification/custom_modification.html">
+              <button class="nbutton">CUSTOM MODIFICATION</button>
+            </a>
+          </div>
+          <div class="navigation4">
+            <a href="../Contact/contact.html">
+              <button class="nbutton">CONTACT INFO</button>
+            </a>
+          </div>
+          <div class="navigation5">
+            <a href="../faq/faq.html">
+              <button class="nbutton">FAQ</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="content_kiri">
+          <h1>
+            THE START OF A NEW ERA.<br />
+            EVERLASTING THE TRUE HISTORY.
+          </h1>
+
+          <p>
+            A WEBSITE FOR ALL.<br />
+            LET IT BE FOR NEWS NOR VETERANS.
+          </p>
+
+          <a href="../car/car.html">
+            <button class="click_more">CLICK FOR MORE</button>
+          </a>
         </div>
 
-        <div class="content">
-            <div class="content_kiri">
-                <h1>
-                    THE START OF A NEW ERA.<br>
-                    EVERLASTING THE TRUE HISTORY.
-                </h1>
-
-                <p>
-                    A WEBSITE FOR ALL.<br>
-                    LET IT BE FOR NEWS NOR VETERANS.
-                </p>
-
-                <a href="../car/car.html">
-                    <button class="click_more">
-                        CLICK FOR MORE
-                    </button>
-                </a>
-            </div>
-
-            <div class="content_kanan">
-                <div class="kotak">
-                    <img src="foto_mobil_hover2.png" id="foto_depan">
-                </div>
-            </div>
+        <div class="content_kanan">
+          <div class="kotak">
+            <img src="foto_mobil_hover2.png" id="foto_depan" />
+          </div>
         </div>
+      </div>
 
-        <div class="grid">
-            <div class="grid_atas">
-                <div class="grid1">
-                    <img src="grid/3.png">
-                </div>
-                <div class="grid2">
-                    <img src="grid/1.png">
-                </div>
-                <div class="grid3">
-                    <img src="grid/3.png">
-                </div>
-            </div>
-            <div class="grid_bawah">
-                <div class="grid4">
-                    <img src="grid/1.png">
-                </div>
-                <div class="grid5">
-                    <img src="grid/3.png">
-                </div>
-                <div class="grid6">
-                    <img src="grid/1.png">
-                </div>
-            </div>
+      <div class="grid">
+        <div class="grid_atas">
+          <div class="grid1">
+            <img src="grid/3.png" />
+          </div>
+          <div class="grid2">
+            <img src="grid/1.png" />
+          </div>
+          <div class="grid3">
+            <img src="grid/3.png" />
+          </div>
         </div>
+        <div class="grid_bawah">
+          <div class="grid4">
+            <img src="grid/1.png" />
+          </div>
+          <div class="grid5">
+            <img src="grid/3.png" />
+          </div>
+          <div class="grid6">
+            <img src="grid/1.png" />
+          </div>
+        </div>
+      </div>
 
-        <div class="footer">
-            <img src="Logo 3.png">
-        </div>
+      <div class="footer">
+        <img src="Logo 3.png" />
+      </div>
     </div>
-</body>
+  </body>
 
-<script>
-    document.addEventListener('DOMContentLoaded',()=>{
-        const foto_depan = document.getElementById('foto_depan');
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const foto_depan = document.getElementById("foto_depan");
 
-        foto_depan.addEventListener('mouseenter',()=>{
-            foto_depan.src = "foto_mobil_hover1.png";
-        });
+      foto_depan.addEventListener("mouseenter", () => {
+        foto_depan.src = "foto_mobil_hover1.png";
+      });
 
-        foto_depan.addEventListener('mouseleave',()=>{
-            foto_depan.src = "foto_mobil_hover2.png";
-        });
+      foto_depan.addEventListener("mouseleave", () => {
+        foto_depan.src = "foto_mobil_hover2.png";
+      });
     });
-</script>
-
+  </script>
 </html>
