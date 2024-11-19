@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR</title>
+    <style>
+          @font-face{
+            font-family:'agrandir';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-GrandHeavy.otf');
+        }
+        @font-face{
+            font-family:'agrandir_tipis';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-Regular.otf');
+        }
+        @font-face{
+            font-family:'agrandir_tebal';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-TextBold.otf');
+        }
+
+        @font-face{
+            font-family:'glacial';
+            src:url('glacial-indifference/GlacialIndifference-Bold.otf');
+        }
+
+        @font-face{
+            font-family:'tt';
+            src:url('tt_chocolates/TT\ Chocolates\ Trial\ Regular.otf');
+        }
+
+        @font-face{
+            font-family:'monserrat';
+            src:url('montserrat full version/Montserrat-Bold.otf');
+        }
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+
+        .custom_modification_page{
+            display:grid;
+            grid-area:'custom_modification_page';
+            width:100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 60px 1300px 200px;
+            grid-template-areas: 
+            'navbar'
+            'content'
+            'footer'
+
+            ;
+            background-color:none;
+
+        }
+
+        .navbar{
+            display:grid;
+            grid-area:'navbar';
+            width:100%;
+            height:60px;
+            grid-template-columns: 25% 75%;
+            grid-template-rows:60px ;
+            grid-template-areas: 
+            'logo'
+            'navigation_button'
+
+            ;
+            background-color:none;
+            
+        }
+
+        .logo{
+            grid-area:'logo';
+            width:100%;
+            height:60px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-5%;
+            background-color:none;
+            margin-top:10px;
+        }
+
+        .navigation_button{
+            display:grid;
+            grid-area:'navigation_button';
+            width:100%;
+            height:60px;
+            grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
+            grid-template-rows: 60px;
+            grid-template-areas:
+            'navigation1'
+            'navigation2'
+            'navigation3'
+            'navigation4'
+            'navigation5'
+            ;
+            background-color:none;
+        }
+
+        .navigation1{
+            grid-area:'navigation1';
+
+        }
+        .navigation2{
+            grid-area:'navigation2';
+
+        }
+        .navigation3{
+            grid-area:'navigation3';
+
+        }
+        .navigation4{
+            grid-area:'navigation4';
+            margin-left:10%;
+
+        }
+        .navigation5{
+            grid-area:'navigation5';
+
+        }
+        .nbutton{
+            width:100%;
+            border-style:none;
+            background-color:white;
+            font-size:11px;
+            font-family:'agrandir';
+            margin-top:30px;
+        }
+        .nbutton:hover{
+            font-size:13px;
+            transition:0.2s;
+        }
+
+        .logo img{
+            width:35%;
+        }
+
+        .content{
+            display:grid;
+            grid-area:'content';
+            width:100%;
+            height:1300px;
+            grid-template-columns:100% ;
+            grid-template-rows: 400px 200px 700px;
+            grid-template-areas:
+            'content_atas'
+            'content_tengah'
+            'content_bawah'
+            ;
+            background-color:white;
+            
+            
+        }
+
+
+        .content_atas{
+            grid-area:'content_atas';
+            width:100%;
+            height:400px;
+            background-color:white;
+
+        }
+
+        .fyd{
+            font-family:'glacial';
+            font-size:35px;
+            opacity:60%;
+            text-align:center;
+            margin-left:-58%;
+            margin-top:80px;
+            
+        }
+
+
+        .pi{
+            font-family:'glacial';
+            font-size:35px;
+            opacity:60%;
+            text-align:center;
+            color:red;
+            margin-top:-40px;
+        }
+
+        .pfi{
+            font-family:'glacial';
+            font-size:35px;
+            opacity:60%;
+            text-align:center;
+            margin-left:60%;
+            margin-top:-30px;
+        }
+
+        .content_tengah{
+            grid-area:'content_tengah';
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content_tengah img{
+            width:50%;
+        }
+
+
+        .content_bawah{
+            display:grid;
+            grid-area:'content_bawah';
+            width:100%;
+            height:700px;
+            display:flex;
+            justify-content: center;
+            align-items: center;   
+        }
+
+        .content_bawah_all{
+            grid-area:'content_bawah';
+            display:grid;
+            width:900px;
+            height:600px;
+            grid-template-columns:900px ;
+            grid-template-rows: 300px 300px;
+            grid-template-areas: 
+            'content_bawah_atas'
+            'content_bawah_bawah'
+            ;
+            background-color:white;
+            
+
+        }
+
+
+
+        .content_bawah_atas{
+            display:grid;
+            grid-area:'content_bawah_atas';
+            width:900px;
+            height:300px;
+            grid-template-columns:300px 300px 300px ;
+            grid-template-rows: 300px;
+            grid-template-areas:
+            'cba1'
+            'cba2'
+            'cba3'
+
+            ;
+            
+            
+        }
+
+        .cba1{
+            display:grid;
+            grid-area:'cba1';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cba1d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cba1d{
+            grid-area:'cba1d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+        .cba2{
+            display:grid;
+            grid-area:'cba2';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cba2d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cba2d{
+            grid-area:'cba2d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        
+        .cba3{
+            display:grid;
+            grid-area:'cba3';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cba3d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cba3d{
+            grid-area:'cba3d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+
+        .content_bawah_bawah{
+            display:grid;
+            grid-area:'content_bawah_bawah';
+            width:100%;
+            height:300px;
+            grid-template-columns:300px 300px 300px ;
+            grid-template-rows: 300px;
+            grid-template-areas:
+            'cbb1'
+            'cbb2'
+            'cbb3'
+            ;   
+            
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cbb1{
+            display:grid;
+            grid-area:'cbb1';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cbb1d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cbb1d{
+            grid-area:'cbb1d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .cbb2{
+            display:grid;
+            grid-area:'cbb2';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cbb2d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cbb2d{
+            grid-area:'cbb2d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+        .cbb3{
+            display:grid;
+            grid-area:'cbb3';
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            grid-template-areas: 
+            'cbb3d'
+            ;
+            width:300px;
+            height:300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cbb3d{
+            grid-area:'cbb3d';
+            width:250px;
+            height:250px;
+            background-color:yellow;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+
+        .car_name1{
+            width:130px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-90px;
+            margin-top:190px;
+        }
+
+        .car_name2{
+            width:130px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-90px;
+            margin-top:190px;
+        }
+
+        .car_name3{
+            width:150px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-70px;
+            margin-top:190px;
+        }
+
+        .car_name4{
+            width:130px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-90px;
+            margin-top:190px;
+        }
+
+        .car_name5{
+            width:170px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-50px;
+            margin-top:190px;
+        }
+
+        .car_name6{
+            width:100px;
+            height:25px;
+            border-radius:10px;
+            position:absolute;
+            background-color:rgba(0,0,0,0.11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-110px;
+            margin-top:190px;
+        }
+
+        .car_img:hover+.car_name p{
+            font-size:20px;
+        }
+
+        .car_p{
+            font-family:'tt';
+            font-size:15px;
+            color:#FFFFFF;
+
+        }
+
+        .car_img{
+            width:250px;
+            height:250px;
+        }
+
+        .car_img:hover{
+            width:280px;
+            height:280px;
+            transition:0.5s;
+
+        }
+
+        .onsale{
+            width:60px;
+            height:20px;
+            background-color:red;
+            border-radius:5px;
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-150px;
+            margin-top:-200px;
+
+        }
+
+        .onsale p{
+            
+            color:white;
+            font-size:12px;
+            position:absolute;
+            font-family:'monserrat';
+        }
+
+
+
+        .footer{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            grid-area:'footer';
+            background-color:white;
+        }
+
+        .footer img{
+            width:100px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="custom_modification_page">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo-no-background.png">
+            </div>
+            <div class="navigation_button">
+                <div class="navigation1">
+                    <a href="../Index/index.html">
+                        <button class="nbutton">
+                            HOME
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation2">
+                    <a href="../car/car.html">
+                        <button class="nbutton">
+                            CARS
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation3">
+                    <a href="../cutom_modification/custom_modification.html">
+                        <button class="nbutton">
+                            CUSTOM MODIFICATION
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation4">
+                    <a href="../Contact/contact.html">
+                        <button class="nbutton">
+                            CONTACT INFO
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation5">
+                    <a href="../faq/faq.html">
+                        <button class="nbutton">
+                            FAQ
+                        </button>
+                    </a>                    
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_atas">
+                <h1 class="fyd">
+                    FIND YOUR<br> DREAM
+                </h1>
+
+                <h1 class="pi">
+                    PURSUE IT
+                </h1>
+
+                <h1 class="pfi">
+                    PAY FOR<br>
+                    IT
+                </h1>
+            </div>
+            <div class="content_tengah">
+                <img src="logo-no-background.png">
+            </div>
+            <div class="content_bawah">
+              <div class="content_bawah_all">
+                <div class="content_bawah_atas">
+                    <div class="cba1">
+                        <div class="cba1d">
+                            <img src="car1.png" id="car_img1" class="car_img">
+                            <div class="car_name1" id="car_name1">
+                                <p class="car_p" id="car_p1" >
+                                    Honda Civic EK9
+                                </p>
+                                
+                            </div>
+                            <div class="onsale">
+                                <p>
+                                    On sale!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cba2">
+                        <div class="cba2d">
+                            <img src="car2.png" class="car_img" id="car_img2">
+                            <div class="car_name2" id="car_name2">
+                                <p class="car_p" id="car_p2">
+                                    Toyota Supra MK4
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cba3">
+                        <div class="cba3d">
+                            <img src="car3.png" id="car_img3" class="car_img">
+                            <div class="car_name3" id="car_name3" >
+                                <p class="car_p" id="car_p3">
+                                    Subaru Impreza 22B
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_bawah_bawah">
+                    <div class="cbb1">
+                        <div class="cbb1d">
+                            <img src="car4.png" id="car_img4" class="car_img">
+                            <div class="car_name4" id="car_name4">
+                                <p class="car_p" id="car_p4">
+                                    Mitsubishi EVO 6
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbb2">
+                        <div class="cbb2d">
+                            <img src="car5.png" id="car_img5" class="car_img">
+                            <div class="car_name5" id="car_name5">
+                                <p class="car_p" id="car_p5">
+                                    Nissan Skyline GTR R34
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cbb3">
+                        <div class="cbb3d">
+                            <img src="car6.png" id="car_img6" class="car_img">
+                            <div class="car_name6" id="car_name6">
+                                <p class="car_p" id="car_p6">
+                                    Mazda RX7
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="Logo 3.png">
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        
+
+        const car_img1 = document.getElementById('car_img1');
+        const car_img2 = document.getElementById('car_img2');
+        const car_img3 = document.getElementById('car_img3');
+        const car_img4 = document.getElementById('car_img4');
+        const car_img5 = document.getElementById('car_img5');
+        const car_img6 = document.getElementById('car_img6');
+
+
+        const car_name1 = document.getElementById('car_name1');
+        const car_name2 = document.getElementById('car_name2');
+        const car_name3 = document.getElementById('car_name3');
+        const car_name4 = document.getElementById('car_name4');
+        const car_name5 = document.getElementById('car_name5');
+        const car_name6 = document.getElementById('car_name6');
+
+
+        const car_p1 = document.getElementById('car_p1');
+        const car_p2 = document.getElementById('car_p2');
+        const car_p3 = document.getElementById('car_p3');
+        const car_p4 = document.getElementById('car_p4');
+        const car_p5 = document.getElementById('car_p5');
+        const car_p6 = document.getElementById('car_p6');
+
+        
+
+        car_img1.addEventListener('mouseover',function(){
+            car_name1.style.width = '150px';
+            car_name1.style.height = '30px';
+            car_p1.style.fontSize = '18px';
+            car_p1.style.transition = '0.3s';
+            car_name1.style.transition = '0.3s';
+        });
+
+        car_img1.addEventListener('mouseleave',function(){
+            car_name1.style.width = '130px';
+            car_name1.style.height = '25px';
+            car_p1.style.fontSize = '15px';
+        });
+
+
+        car_img2.addEventListener('mouseover',function(){
+            car_name2.style.width = '150px';
+            car_name2.style.height = '30px';
+            car_p2.style.fontSize = '18px';
+            car_p2.style.transition = '0.3s';
+            car_name2.style.transition = '0.3s';
+        });
+
+        car_img2.addEventListener('mouseleave',function(){
+            car_name2.style.width = '130px';
+            car_name2.style.height = '25px';
+            car_p2.style.fontSize = '15px';
+        });
+
+        car_img3.addEventListener('mouseover',function(){
+            car_name3.style.width = '170px';
+            car_name3.style.height = '30px';
+            car_p3.style.fontSize = '18px';
+            car_p3.style.transition = '0.3s';
+            car_name3.style.transition = '0.3s';
+        });
+
+        car_img3.addEventListener('mouseleave',function(){
+            car_name3.style.width = '150px';
+            car_name3.style.height = '25px';
+            car_p3.style.fontSize = '15px';
+        });
+
+        car_img4.addEventListener('mouseover',function(){
+            car_name4.style.width = '150px';
+            car_name4.style.height = '30px';
+            car_p4.style.fontSize = '18px';
+            car_p4.style.transition = '0.3s';
+            car_name4.style.transition = '0.3s';
+        });
+
+        car_img4.addEventListener('mouseleave',function(){
+            car_name4.style.width = '130px';
+            car_name4.style.height = '25px';
+            car_p4.style.fontSize = '15px';
+        });
+
+        car_img5.addEventListener('mouseover',function(){
+            car_name5.style.width = '200px';
+            car_name5.style.height = '30px';
+            car_p5.style.fontSize = '18px';
+            car_p5.style.transition = '0.3s';
+            car_name5.style.transition = '0.3s';
+        });
+
+        car_img5.addEventListener('mouseleave',function(){
+            car_name5.style.width = '170px';
+            car_name5.style.height = '25px';
+            car_p5.style.fontSize = '15px';
+        });
+
+        car_img6.addEventListener('mouseover',function(){
+            car_name6.style.width = '130px';
+            car_name6.style.height = '30px';
+            car_p6.style.fontSize = '18px';
+            car_p6.style.transition = '0.3s';
+            car_name6.style.transition = '0.3s';
+        });
+
+        car_img6.addEventListener('mouseleave',function(){
+            car_name6.style.width = '100px';
+            car_name6.style.height = '25px';
+            car_p6.style.fontSize = '15px';
+        });
+    });
+
+</script>
+
+</html>

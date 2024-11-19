@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <style>
+        @font-face{
+            font-family:'agrandir';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-GrandHeavy.otf');
+        }
+        @font-face{
+            font-family:'agrandir_tipis';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-Regular.otf');
+        }
+
+        @font-face{
+            font-family:'agrandir_tebal';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-TextBold.otf');
+        }
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+
+        .home_page{
+            display:grid;
+            grid-area:'home_page';
+            width:100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 60px 600px 200px;
+            grid-template-areas: 
+            'navbar'
+            'content'
+            'footer'
+            ;
+            background-color:none;
+
+        }
+
+        .navbar{
+            display:grid;
+            grid-area:'navbar';
+            width:100%;
+            height:60px;
+            grid-template-columns: 25% 75%;
+            grid-template-rows:60px ;
+            grid-template-areas: 
+            'logo'
+            'navigation_button'
+
+            ;
+            background-color:none;
+            
+        }
+
+        .logo{
+            grid-area:'logo';
+            width:100%;
+            height:60px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-5%;
+            background-color:none;
+            margin-top:10px;
+        }
+
+        .navigation_button{
+            display:grid;
+            grid-area:'navigation_button';
+            width:100%;
+            height:60px;
+            grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
+            grid-template-rows: 60px;
+            grid-template-areas:
+            'navigation1'
+            'navigation2'
+            'navigation3'
+            'navigation4'
+            'navigation5'
+            ;
+            background-color:none;
+        }
+
+        .navigation1{
+            grid-area:'navigation1';
+
+        }
+        .navigation2{
+            grid-area:'navigation2';
+
+        }
+        .navigation3{
+            grid-area:'navigation3';
+
+        }
+        .navigation4{
+            grid-area:'navigation4';
+            margin-left:10%;
+
+        }
+        .navigation5{
+            grid-area:'navigation5';
+
+        }
+        .nbutton{
+            width:100%;
+            border-style:none;
+            background-color:white;
+            font-size:11px;
+            font-family:'agrandir';
+            margin-top:30px;
+        }
+        .nbutton:hover{
+            font-size:13px;
+            transition:0.2s;
+        }
+
+        .logo img{
+            width:35%;
+        }     
+        
+        .content{
+            display:grid;
+            grid-area:'content';
+            width:100%;
+            height:600px;
+            grid-template-columns:100% ;
+            grid-template-rows:100px 500px;
+            grid-template-areas: 
+            'judul_content'
+            'CI'
+            ;
+        }
+
+        .judul_content{
+            grid-area:'judul_content';
+            width:100%;
+            height:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:white;
+
+        }
+        
+        .judul_content h1{
+            font-size:20px;
+            font-family:'agrandir_tebal';
+            margin-top:40px;
+        }
+
+        .CI{
+            display:grid;
+            grid-area:'CI';
+            width:100%;
+            height:500px;
+            grid-template-rows:120px 120px 120px 120px 20px;
+            grid-template-columns: 100%;
+            grid-template-areas:
+            'ci1'
+            'ci2'
+            'ci3'
+            'ci4'
+            'ci5'
+            ;
+        }
+
+        .ci1{
+            grid-area:'ci1';
+            width:100%;
+            height:120px;
+            background-color:none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .ci_komponen1{
+            background-color:#D6D6D6;
+            width:40%;
+            height:50px;
+            margin-top:-30px;
+            font-family:'agrandir_tipis';
+            color:#A6A6A6;
+            font-style:bold;
+            border-style:none;
+            padding-left:20px;
+        }
+
+        .ci2{
+            grid-area:'ci2';
+            width:100%;
+            height:120px;
+            background-color:none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .ci_komponen2{
+            background-color:#E8E8E8;
+            width:40%;
+            height:50px;
+            margin-top:-90px;
+            font-family:'agrandir_tipis';
+            color:#A6A6A6;
+            font-style:bold;
+            border-style:none;
+            padding-left:20px;
+        }
+
+        .ci3{
+            grid-area:'ci3';
+            width:100%;
+            height:120px;
+            background-color:none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .ci_komponen3{
+            background-color:#EDEDED;
+            width:40%;
+            height:50px;
+            margin-top:-150px;
+            font-family:'agrandir_tipis';
+            color:#A6A6A6;
+            font-style:bold;
+            border-style:none;
+            padding-left:20px;
+        }
+
+        .ci4{
+            grid-area:'ci4';
+            width:100%;
+            height:120px;
+            background-color:none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .ci_komponen4{
+            background-color:#F4F3F3;
+            width:40%;
+            height:50px;
+            margin-top:-210px;
+            font-family:'agrandir_tipis';
+            color:#A6A6A6;
+            font-style:bold;
+            border-style:none;
+            padding-left:20px;
+        }
+
+        .ci5{
+            grid-area:'ci5';
+            width:100%;
+            height:20px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .submit{
+            font-size:8px;
+            width:120px;
+            height:23px;
+            margin-top:-150px;
+            border-radius:50px;
+            color:white;
+            background-color:black;
+            font-family:'agrandir_tipis';
+            border-style:none;
+        }
+
+        .submit:hover{
+            background-color:red;
+        }
+
+        .footer{
+            display:flex;
+            justify-content: center;
+            width:100%;
+            height:200px;
+            align-items: center;
+            grid-area:'footer';
+            background-color:white;
+        }
+
+        .footer img{
+            width:100px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo-no-background.png">
+            </div>
+            <div class="navigation_button">
+                <div class="navigation1">
+                    <a href="../Index/index.html">
+                        <button class="nbutton">
+                            HOME
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation2">
+                    <a href="../car/car.html">
+                        <button class="nbutton">
+                            CARS
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation3">
+                    <a href="../cutom_modification/custom_modification.html">
+                        <button class="nbutton">
+                            CUSTOM MODIFICATION
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation4">
+                    <a href="../Contact/contact.html">
+                        <button class="nbutton">
+                            CONTACT INFO
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation5">
+                    <a href="../faq/faq.html">
+                        <button class="nbutton">
+                            FAQ
+                        </button>
+                    </a>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="judul_content">
+                <h1>Contact Info</h1>
+            </div>
+            <div class="CI">
+                <div class="ci1">
+                    <input type="text" id="ci1" value="NAME" class="ci_komponen1">
+                </div>
+
+                <div class="ci2">
+                    <input type="text" id="ci2" value="LAST NAME" class="ci_komponen2">
+                </div>
+
+                <div class="ci3">
+                    <input type="text" id="ci3" value="EMAIL" class="ci_komponen3">
+                </div>
+
+                <div class="ci4">
+                    <input type="text" id="ci4" value="PHONE NUMBER" class="ci_komponen4">
+                </div>
+                <div class="ci5">
+                    <button class="submit" id="submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <img src="Logo 3.png">
+        </div>
+
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        const submit = document.getElementById('submit');
+        const ci1 = document.getElementById('ci1');
+        const ci2 = document.getElementById('ci2');
+        const ci3 = document.getElementById('ci3');
+        const ci4 = document.getElementById('ci4');
+
+
+
+        submit.addEventListener('click',()=>{
+            alert('Selamat datang'+'\n'+
+            ci1.value+''+ci2.value);
+
+            window.location.href = '../Index/index.html';
+        });
+    });
+</script>
+</html>

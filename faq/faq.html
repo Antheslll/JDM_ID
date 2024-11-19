@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        @font-face{
+            font-family:'agrandir';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-GrandHeavy.otf');
+        }
+        @font-face{
+            font-family:'agrandir_tipis';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-Regular.otf');
+        }
+        @font-face{
+            font-family:'agrandir_tebal';
+            src:url('Agrandir-Font-Family/Agrandir/Agrandir-TextBold.otf');
+        }
+        body{
+            width:100%;
+            margin:auto;
+
+        }
+
+        .faq_page{
+            display:grid;
+            grid-area:'faq_page';
+            width:100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 60px 750px  200px;
+            grid-template-areas: 
+            'navbar'
+            'content'
+            
+            'footer'
+
+            ;
+            background-color:none;
+
+        }
+
+        .navbar{
+            display:grid;
+            grid-area:'navbar';
+            width:100%;
+            height:60px;
+            grid-template-columns: 25% 75%;
+            grid-template-rows:60px ;
+            grid-template-areas: 
+            'logo'
+            'navigation_button'
+
+            ;
+            background-color:none;
+            
+        }
+
+        .logo{
+            grid-area:'logo';
+            width:100%;
+            height:60px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-5%;
+            background-color:none;
+            margin-top:10px;
+        }
+
+        .navigation_button{
+            display:grid;
+            grid-area:'navigation_button';
+            width:100%;
+            height:60px;
+            grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
+            grid-template-rows: 60px;
+            grid-template-areas:
+            'navigation1'
+            'navigation2'
+            'navigation3'
+            'navigation4'
+            'navigation5'
+            ;
+            background-color:none;
+        }
+
+        .navigation1{
+            grid-area:'navigation1';
+
+        }
+        .navigation2{
+            grid-area:'navigation2';
+
+        }
+        .navigation3{
+            grid-area:'navigation3';
+
+        }
+        .navigation4{
+            grid-area:'navigation4';
+            margin-left:10%;
+
+        }
+        .navigation5{
+            grid-area:'navigation5';
+
+        }
+        .nbutton{
+            width:100%;
+            border-style:none;
+            background-color:white;
+            font-size:11px;
+            font-family:'agrandir';
+            margin-top:30px;
+        }
+        .nbutton:hover{
+            font-size:13px;
+            transition:0.2s;
+        }
+
+        .logo img{
+            width:35%;
+        }
+
+        .content{
+            display:grid;
+            grid-area:'content';
+            width:100%;
+            height:750px;
+            grid-template-columns: 40% 60%;
+            grid-template-rows:600px;
+            grid-template-areas:
+            'content_header'
+            'content_faq'
+            ;
+            
+
+        }
+
+        .content_header{
+            display:grid;
+            grid-area:'content_header';
+            width:100%;
+            height:600px;
+            background-color:white;
+        }
+
+        .content_header h1{
+            font-family:'agrandir';
+            font-size:20px;
+            margin-top:230px;
+            margin-left:22%;
+        }
+
+        .content_header p{
+            font-family:'agrandir_tipis';
+            font-size:15px;
+            margin-left:22%;
+            margin-top:-150px;
+        }
+
+
+        .content_faq{
+            display:grid;
+            grid-area:'content_faq';
+            width:100%;
+            height:600px;
+            grid-template-columns:700px ;
+            grid-template-rows: 500px ;
+            grid-template-areas:
+            'content_faq_area'
+            ;
+            background-color:white;
+            align-content: center;
+
+        }
+
+        .content_faq_area{
+            display:grid;
+            grid-area:'content_faq_area';
+            width:700px;
+            height:500px;
+            grid-template-columns: 700px ;
+            grid-template-rows:125px 125px 125px 125px ;
+            grid-template-areas: 
+            'faq1'
+            'faq2'
+            'faq3'
+            'faq4'
+            ;
+            background-color:white;
+
+        }
+
+        .faq1{
+            grid-area:'faq1';
+            background-color:black;
+            width:600px;
+            height:80.2px;
+            margin-top:35px;
+            
+        }
+
+        .drop1{
+            width:600px;
+            height:80.2px;
+            border-radius:0px;
+            border-style:none;        
+            
+            background-color:#D6D6D6;
+            font-family:'agrandir_tebal';
+            color:#A6A6A6;
+            font-size:15px;
+
+        }
+        
+        .drop1:hover{
+            background-color:#A6A6A6;
+            color:#D6D6D6;
+        }
+
+        .faq1:hover .drop-content1{
+            display:grid;
+        }
+
+        .drop-content1{
+            display:none;
+            width:600px;
+            height:200px;
+            background-color:white;
+            border-style:solid;
+            border-color:black;
+            border-width:0.1px;
+            font-family:'agrandir_tipis';
+            position:absolute;
+            
+        }
+
+        .drop-content1 p{
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+
+
+        .faq2{
+            grid-area:'faq2';
+            background-color:white;
+            width:600px;
+            height:80.2px;
+            margin-top:35px;
+            
+        }
+
+        .drop2{
+            width:600px;
+            height:80.2px;
+            border-radius:0px;
+            border-style:none;        
+            
+            background-color:#E8E8E8;
+            font-family:'agrandir_tebal';
+            color:#A6A6A6;
+            font-size:15px;
+
+        }
+
+        .drop2:hover{
+            color:#E8E8E8;
+            background-color:#A6A6A6;
+        }
+
+        .faq2:hover .drop-content2{
+            display:grid;
+        }
+
+        .drop-content2{
+            display:none;
+            width:600px;
+            height:200px;
+            background-color:white;
+            border-style:solid;
+            border-color:black;
+            border-width:0.1px;
+            font-family:'agrandir_tipis';
+            position:absolute;
+        }
+
+        .drop-content2 p{
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+
+        .faq3{
+            grid-area:'faq3';
+            background-color:white;
+            width:600px;
+            height:80.2px;
+            margin-top:35px;
+            
+        }
+
+        .drop3{
+            width:600px;
+            height:80.2px;
+            border-radius:0px;
+            border-style:none;        
+            
+            background-color:#EDEDED;
+            font-family:'agrandir_tebal';
+            color:#A6A6A6;
+            font-size:15px;
+
+        }
+
+        .drop3:hover{
+            background-color:#A6A6A6;
+            color:#EDEDED;
+        }
+
+        .faq3:hover .drop-content3{
+            display:grid;
+        }
+
+        .drop-content3{
+            display:none;
+            width:600px;
+            height:200px;
+            background-color:white;
+            border-style:solid;
+            border-color:black;
+            border-width:0.1px;
+            font-family:'agrandir_tipis';
+            position:absolute;
+            
+        }
+
+        .drop-content3 p{
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+
+        .faq4{
+            grid-area:'faq4';
+            background-color:white;
+            width:600px;
+            height:80.2px;
+            margin-top:35px;
+            
+        }
+
+        .drop4{
+            width:600px;
+            height:80.2px;
+            border-radius:0px;
+            border-style:none;        
+            
+            background-color:#F4F3F3;
+            font-family:'agrandir_tebal';
+            color:#A6A6A6;
+            font-size:15px;
+            
+            
+        }
+
+        .drop4:hover{
+            color:#F4F3F3;
+            background-color:#A6A6A6;
+        }
+
+        .faq4:hover .drop-content4{
+            display:grid;
+        }
+
+        .drop-content4{
+            display:none;
+            width:600px;
+            height:200px;
+            background-color:white;
+            border-style:solid;
+            border-color:black;
+            border-width:0.1px;
+            font-family:'agrandir_tipis';
+            
+        }
+
+        .drop-content4 p{
+            margin-left:20px;
+            margin-right:20px;
+        }
+
+        .footer{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            grid-area:'footer';
+            background-color:white;
+            
+        }
+
+        .footer img{
+            width:100px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="faq_page">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo-no-background.png">
+            </div>
+            <div class="navigation_button">
+                <div class="navigation1">
+                    <a href="../Index/index.html">
+                        <button class="nbutton">
+                            HOME
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation2">
+                    <a href="../car/car.html">
+                        <button class="nbutton">
+                            CARS
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation3">
+                    <a href="../cutom_modification/custom_modification.html">
+                        <button class="nbutton">
+                            CUSTOM MODIFICATION
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation4">
+                    <a href="../Contact/contact.html">
+                        <button class="nbutton">
+                            CONTACT INFO
+                        </button>
+                    </a>                    
+                </div>
+                <div class="navigation5">
+                    <a href="../faq/faq.html">
+                        <button class="nbutton">
+                            FAQ
+                        </button>
+                    </a>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content_header">
+                <h1>
+                    FREQUENTLY ASKED<br>
+                    QUESTION
+                </h1>
+                <p>
+                    ABOUT US
+                </p>
+            </div>
+
+            <div class="content_faq">
+                <div class="content_faq_area">
+                    <div class="faq1">
+                        <div class="faq1_div">
+                            <button class="drop1">
+                                Apa itu JDM dan apa kaitannya dengan industri otomotif?
+                            </button>
+                            <div class="drop-content1">
+                                <p>
+                                    JDM merupakan singkatan dari "Japanese Domestic Market". Istilah ini merujuk pada mobil, suku cadang, dan aksesori otomotif yang diproduksi khusus untuk pasar domestik Jepang. Di JDM.ID, kami mengkhususkan diri dalam menyediakan produk-produk otomotif berkualitas dari pasar Jepang untuk para penggemar otomotif di Indonesia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq2">
+                        <div class="faq2_div">
+                            <button class="drop2">
+                                Apakah JDM.ID menyediakan layanan pengiriman internasional?
+                            </button>
+                            <div class="drop-content2">
+                                <p>
+                                    Ya, kami menyediakan layanan pengiriman internasional ke berbagai negara, termasuk Indonesia. Kami bekerja sama dengan jasa pengiriman terpercaya untuk memastikan produk yang dipesan tiba dengan aman dan tepat waktu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq3">
+                        <div class="faq3_div">
+                            <button class="drop3">
+                                Bagaimana cara merawat mobil JDM agar tetap dalam kondisi terbaik?
+                            </button>
+                            <div class="drop-content3">
+                                <p>
+                                    Merawat mobil JDM memerlukan perhatian khusus terhadap suku cadang dan aksesori yang unik. Kami merekomendasikan untuk melakukan perawatan rutin sesuai dengan pedoman pabrikan, menggunakan suku cadang asli JDM, dan melakukan pemeriksaan berkala di bengkel yang terpercaya.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq4">
+                        <div class="faq4_div">
+                            <button class="drop4">
+                                Apakah JDM.ID memiliki layanan konsultasi untuk proyek modifikasi atau restorasi mobil?
+                            </button>
+                            <div class="drop-content4">
+                                <p>
+                                    Kami memiliki tim ahli yang siap memberikan konsultasi terkait proyek modifikasi atau restorasi mobil Anda. Silakan hubungi tim layanan pelanggan kami untuk mendapatkan informasi lebih lanjut tentang layanan konsultasi kami dan bagaimana kami dapat membantu mewujudkan proyek otomotif impian Anda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="Logo 3.png">
+        </div>
+    </div>
+</body>
+</html>
